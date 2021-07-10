@@ -1,18 +1,35 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import NavMenu from "./components/NavMenu";
-import logo from './test.jpg';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact"
+import Projects from "./pages/Projects"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="App-logo">
-          Jan Sernec sd
-        </p>
-      </header>
-    </div>
+    <>
+      <Router>
+        <NavMenu />
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+
+          <Route path="/">
+            <Home />
+          </Route>
+
+        </Switch>
+      </Router>
+    </>
   );
 }
 
