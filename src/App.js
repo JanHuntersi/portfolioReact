@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+
 import NavMenu from "./components/NavMenu";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact"
 import Projects from "./pages/Projects"
+
 import './App.css';
+
+
 
 function App() {
   return (
