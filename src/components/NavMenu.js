@@ -38,7 +38,7 @@ hide-navItems{
 
  li a{
     display-inline:block;
-   
+   padding 7px;
     }
 
     .mobile-menu-icon{
@@ -52,16 +52,18 @@ hide-navItems{
 
 @media only screen and (max-width: 768px){
 
+    .mobile-menu-icon,.mobile-menu-icon-close{
+        font-size:2rem;
+        cursor:pointer;
+    } 
+    
 .mobile-menu-icon{
     display: fixed;
     top:50px;
     z-index: 300;
-  
-cursor: pointer;
 }
 .mobile-menu-icon-close{
     display: none;
-cursor: pointer;
 }
 li a{color: white;}
 .active{
@@ -70,9 +72,9 @@ li a{color: white;}
 .navItems{
     position: absolute;
     right: 0px;
-    height: 100vh;
-top:0;   
-    width: 50vw;
+    height: 90vh;
+    top:3rem;   
+    width: 70vw;
     color: var(--second);
     background-color: black;
     flex-direction: column;
@@ -87,9 +89,9 @@ top:0;
 .hide-navItems{
     position: absolute;
     right: 0px;
-    height: 100vh;
-top:0;   
-    width: 50vw;
+    height: 90vh;
+    top:3rem;   
+    width: 70vw;
     color: balck;
     background-color: black;
     flex-direction: column;
